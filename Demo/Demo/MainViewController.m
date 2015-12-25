@@ -22,7 +22,7 @@
         HCPaperFoldGalleryView *galleryView = [[HCPaperFoldGalleryView alloc] initWithFrame:CGRectMake(0, 0, [self.view bounds].size.width, [self.view bounds].size.height) folds:5];
         [galleryView setDelegate:self];
         [galleryView setDatasource:self];
-        [galleryView setAutoresizingMask:UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth];
+//        [galleryView setAutoresizingMask:UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth];
         [self.view addSubview:galleryView];
         self.galleryView = galleryView;
         
@@ -35,6 +35,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    self.edgesForExtendedLayout = UIRectEdgeNone;
 }
 
 - (void)didReceiveMemoryWarning

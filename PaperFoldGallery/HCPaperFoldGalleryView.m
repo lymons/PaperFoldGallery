@@ -262,18 +262,18 @@
 
 #pragma mark MultiFoldView delegate
 
-- (float)displacementOfMultiFoldView:(id)multiFoldView
+- (CGFloat)displacementOfMultiFoldView:(id)multiFoldView
 {
     if (multiFoldView==self.rightFoldView)
     {
         CGPoint offset = self.scrollView.contentOffset;
-        float x_offset = -1*(offset.x - self.scrollView.frame.size.width*self.pageNumber);
+        CGFloat x_offset = -1*(offset.x - self.scrollView.frame.size.width*self.pageNumber);
         return x_offset;
     }
     else if (multiFoldView==self.centerFoldView)
     {
         CGPoint offset = self.scrollView.contentOffset;
-        float x_offset = -1*(offset.x + self.scrollView.frame.size.width*(1-self.pageNumber));
+        CGFloat x_offset = -1*(offset.x + self.scrollView.frame.size.width*(1-self.pageNumber));
         return x_offset;
     }
     else return 0;
